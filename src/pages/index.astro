@@ -1,31 +1,76 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { projects } from "../components/Projects";
+import { techs } from "../components/Techs";
 ---
 
 <Layout>
-  <div class="mb-32 flex flex-col items-center">
-    <img class="m-8 mx-auto" src="Flag.png" />
-    <h1 class="text-center m-8 text-4xl font-bold tracking-tight">Kractero</h1>
-    <p class="max-w-sm text-left">
+  <div class="mx-auto max-w-3xl mb-32 w-full">
+    <img class="mb-8" src="Flag.png" />
+    <h1 class="font-medium text-2xl mb-8 tracking-tighter">Kractero 🃏</h1>
+    <p class="prose prose-neutral dark:prose-invert">
       The Kingdom of Kractero, also known as Scramble, is an off and on player
       of NationStates since 2011. In their time on the site, they have not done
       much of any note. Hopefully, it picks up soon.
     </p>
   </div>
 
-  <div class="">
-    <div class="grid grid-cols-3 gap-8">
+  <div class="mx-auto max-w-3xl mb-32 w-full">
+    <h2 class="text-lg mb-2 tracking-tighter">Projects</h2>
+    <ul class="space-y-4 py-4">
       {
         projects.map((project) => (
-          <div class="text-left max-w-[240px]">
-            <h2 class="text-base mb-2">{project.name}</h2>
+          <li>
+            <a
+              href={project.url}
+              class="flex flex-col space-y-1.5 !no-underline mb-4"
+            >
+              <div class="flex items-center">
+                <h3 class="text-base font-bold underline">{project.name}</h3>
+                {project.techs.map((tech) => (
+                  <span class="text-xs mx-2 no-underline bg-slate-800 text-center shadow-md overflow-hidden border-0 bg-muted w-max hover:brightness-90 p-1 rounded-md">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <p class="text-sm mb-4">{project.desc}</p>
+            </a>
+            <hr class="mt-4" />
+          </li>
+        ))
+      }
+    </ul>
+    <!-- <div class="grid grid-cols-3 gap-8">
+      {
+        projects.map((project) => (
+          <div class="text-left max-w-[240px] bg-slate-800 p-2 rounded-md">
+            <h3 class="text-base mb-2 font-bold hover:underline">
+              <a target="_blank" rel="noreferrer noopener" href={project.url}>
+                {project.name}
+              </a>
+            </h3>
             <p class="text-sm mb-4">{project.desc}</p>
             <div class="text-xs flex gap-4 flex-wrap">
               {project.techs.map((tech) => (
                 <p>{tech}</p>
               ))}
             </div>
+          </div>
+        ))
+      }
+    </div> -->
+  </div>
+
+  <div class="mx-auto max-w-3xl w-full mb-32">
+    <h2 class="text-2xl mb-2">Technologies I butcher</h2>
+    <p class="mb-6">Tools subject to my poor code quality.</p>
+    <div class="my-8 flex flex-row gap-8 w-full justify-center">
+      {
+        techs.map((tech) => (
+          <div class="border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 rounded flex items-center justify-between px-3 py-4">
+            <a target="_blank" rel="noreferrer noopener" href={tech.url} >
+              <img width="50" src={tech.img} alt={tech.name} title={tech.name} />
+            </a>
           </div>
         ))
       }
