@@ -1,16 +1,34 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import { projects } from "../components/Projects";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <div class="mb-32 flex flex-col items-center">
+    <img class="m-8 mx-auto" src="Flag.png" />
+    <h1 class="text-center m-8 text-4xl font-bold tracking-tight">Kractero</h1>
+    <p class="max-w-sm text-left">
+      The Kingdom of Kractero, also known as Scramble, is an off and on player
+      of NationStates since 2011. In their time on the site, they have not done
+      much of any note. Hopefully, it picks up soon.
+    </p>
+  </div>
+
+  <div class="">
+    <div class="grid grid-cols-3 gap-8">
+      {
+        projects.map((project) => (
+          <div class="text-left max-w-[240px]">
+            <h2 class="text-base mb-2">{project.name}</h2>
+            <p class="text-sm mb-4">{project.desc}</p>
+            <div class="text-xs flex gap-4 flex-wrap">
+              {project.techs.map((tech) => (
+                <p>{tech}</p>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
