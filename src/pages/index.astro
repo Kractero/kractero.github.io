@@ -25,6 +25,8 @@ import { techs } from "../components/Techs";
           <li>
             <a
               href={project.url}
+              target="_blank"
+              rel="noreferrer noopener"
               class="flex flex-col space-y-1.5 !no-underline mb-4"
             >
               <div class="flex items-center">
@@ -42,10 +44,12 @@ import { techs } from "../components/Techs";
         ))
       }
     </ul>
+    <a class="text-base font-bold underline mt-8" href="https://github.com/Kractero">Other random stuff on GitHub</a>
   </div>
 
   <div class="mx-auto max-w-3xl w-full mb-32">
     <h2 class="text-2xl mb-2">Technologies I butcher</h2>
+    <img class="my-8" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kractero&layout=donut-vertical&theme=dark" />
     <p class="mb-6">Tools subject to my poor code quality.</p>
     <div class="my-8 flex flex-row gap-8 w-full justify-center">
       {
@@ -59,4 +63,7 @@ import { techs } from "../components/Techs";
       }
     </div>
   </div>
+
+  <hr class="mb-16" />
+
 </Layout>

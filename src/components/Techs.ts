@@ -11,7 +11,7 @@ export const techs = [
     },
     {
         "name": "JavaScript",
-        "url": "vanilla-js.com",
+        "url": "http://vanilla-js.com",
         "img": "JavaScript.png"
     },
     {
