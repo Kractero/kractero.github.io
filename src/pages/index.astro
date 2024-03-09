@@ -30,7 +30,7 @@ import { techs } from "../components/Techs";
               <div class="flex items-center">
                 <h3 class="text-base font-bold underline">{project.name}</h3>
                 {project.techs.map((tech) => (
-                  <span class="text-xs mx-2 no-underline bg-slate-800 text-center shadow-md overflow-hidden border-0 bg-muted w-max hover:brightness-90 p-1 rounded-md">
+                  <span class="text-xs mx-2 no-underline bg-neutral-800 text-center shadow-md overflow-hidden border-0 bg-muted w-max hover:brightness-90 p-1 rounded-md">
                     {tech}
                   </span>
                 ))}
@@ -42,25 +42,6 @@ import { techs } from "../components/Techs";
         ))
       }
     </ul>
-    <!-- <div class="grid grid-cols-3 gap-8">
-      {
-        projects.map((project) => (
-          <div class="text-left max-w-[240px] bg-slate-800 p-2 rounded-md">
-            <h3 class="text-base mb-2 font-bold hover:underline">
-              <a target="_blank" rel="noreferrer noopener" href={project.url}>
-                {project.name}
-              </a>
-            </h3>
-            <p class="text-sm mb-4">{project.desc}</p>
-            <div class="text-xs flex gap-4 flex-wrap">
-              {project.techs.map((tech) => (
-                <p>{tech}</p>
-              ))}
-            </div>
-          </div>
-        ))
-      }
-    </div> -->
   </div>
 
   <div class="mx-auto max-w-3xl w-full mb-32">
@@ -69,7 +50,7 @@ import { techs } from "../components/Techs";
     <div class="my-8 flex flex-row gap-8 w-full justify-center">
       {
         techs.map((tech) => (
-          <div class="border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 rounded flex items-center justify-between px-3 py-4">
+          <div class="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3 py-4">
             <a target="_blank" rel="noreferrer noopener" href={tech.url} >
               <img width="50" src={tech.img} alt={tech.name} title={tech.name} />
             </a>
