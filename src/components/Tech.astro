@@ -1,0 +1,11 @@
+---
+const { url, img, name } = Astro.props
+---
+
+<div
+  class="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3 py-4"
+>
+  <a target="_blank" rel="noreferrer noopener" href={url}>
+    <img width="50" src={img} alt={name} title={name} />
+  </a>
+</div>

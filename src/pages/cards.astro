@@ -1,61 +1,39 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Cards">
-    <div class="mx-auto max-w-3xl mb-32 w-full prose prose-neutral dark:prose-invert">
-        <div class="mb-8">
-            <h1 class="font-medium text-2xl mb-8 tracking-tighter">Cards</h1>
-            <p>
-                My personal card farming setup.
-            </p>
-        </div>
-
-        <img width={320} class="mx-auto mb-8" src="/cards/Breloom.jpg" />
-
-        <div class="mb-8">
-            <h3 class="text-base mb-2 font-bold hover:underline">Browser</h3>
-            <img class="my-4" width="50" src="/cards/Firefox.png" alt="Firefox" />
-            <p>
-                I daily drive Firefox already, and I have a separate profile for
-                running cards. I use Firefox with <span
-                    ><a
-                        href="https://github.com/yokoffing/Betterfox"
-                        target="_blank"
-                        rel="noreferrer nooepner"
-                        class="underline">an altered Betterfox config</a
-                    ></span
-                >, with some configurations tweaked for less breakage and
-                smoother scrolling.
-            </p>
-            <p class="mt-4">
-                Other extensions I run are a heavily redundant UBlock (my
-                network runs a very strict DNS already).
-            </p>
-        </div>
-
-        <div class="mb-8">
-            <h3 class="text-base mb-2 font-bold hover:underline">
-                Userscript Manager
-            </h3>
-            <img
-                class="my-4"
-                width="50"
-                src="/cards/ViolentMonkey.png"
-                alt="ViolentMonkey"
-            />
-            <p>
-                I use <span
-                    ><a
-                        href="https://violentmonkey.github.io/"
-                        target="_blank"
-                        rel="noreferrer nooepner"
-                        class="underline">ViolentMonkey</a
-                    ></span
-                > as my userscript manager, mainly because it is open-source and
-                has a sizeable community. The user experience is slightly worse than
-                TamperMonkey, but I am willing to accept that tradeoff.
-            </p>
-        </div>
+  <div class="mx-auto max-w-3xl mb-32 w-full prose prose-neutral dark:prose-invert">
+    <div class="mb-8">
+      <h1 class="font-medium text-2xl mb-8 tracking-tighter">Cards</h1>
+      <p>My personal card farming setup.</p>
     </div>
+
+    <img width={320} class="mx-auto mb-8" src="/cards/Breloom.jpg" />
+
+    <div class="mb-8">
+      <h3 class="text-base mb-2 font-bold hover:underline">Browser</h3>
+      <img class="my-4" width="50" src="/cards/Firefox.png" alt="Firefox" />
+      <p>
+        I daily drive Firefox already, and I have a separate profile for running cards. I use Firefox with an a la carte
+        Arkenfox and Betterfox configuration, with some tweaks for less breakage.
+      </p>
+      <p class="mt-4">
+        Other extensions I run are a heavily redundant UBlock (my network runs a very strict DNS already).
+      </p>
+    </div>
+
+    <div class="mb-8">
+      <h3 class="text-base mb-2 font-bold hover:underline">Userscript Manager</h3>
+      <img class="my-4" width="50" src="/cards/ViolentMonkey.png" alt="ViolentMonkey" />
+      <p>
+        I use <span
+          ><a href="https://violentmonkey.github.io/" target="_blank" rel="noreferrer nooepner" class="underline"
+            >ViolentMonkey</a
+          ></span
+        > as my userscript manager, mainly because it is open-source and has a sizeable community. The user experience is
+        slightly worse than TamperMonkey, but I am willing to accept that tradeoff.
+      </p>
+    </div>
+  </div>
 </Layout>

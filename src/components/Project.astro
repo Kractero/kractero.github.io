@@ -1,0 +1,20 @@
+---
+const { url, name, techs, desc } = Astro.props
+---
+
+<li>
+  <a href={url} target="_blank" rel="noreferrer noopener" class="flex flex-col space-y-1.5 !no-underline mb-4">
+    <div class="flex items-center">
+      <h3 class="text-base font-bold underline">{name}</h3>
+      {
+        techs.map((tech: string) => (
+          <span class="text-xs mx-2 no-underline bg-neutral-800 text-center shadow-md overflow-hidden border-0 bg-muted w-max hover:brightness-90 p-1 rounded-md">
+            {tech}
+          </span>
+        ))
+      }
+    </div>
+    <p class="text-sm mb-4">{desc}</p>
+  </a>
+  <hr class="mt-4" />
+</li>

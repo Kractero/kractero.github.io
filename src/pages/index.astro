@@ -1,22 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { projects } from "../components/Projects";
-import { techs } from "../components/Techs";
+import Layout from '../layouts/Layout.astro'
+import Project from '../components/Project.astro'
+import Tech from '../components/Tech.astro'
+import projects from '../data/projects.json'
+import techs from '../data/techs.json'
 ---
 
 <Layout>
   <div class="mx-auto max-w-3xl mb-32 w-full">
-    <a
-      target="_blank"
-      rel="noreferrer noopener"
-      href="https://www.nationstates.net/kractero"
-    >
+    <a target="_blank" rel="noreferrer noopener" href="https://www.nationstates.net/kractero">
       <img class="mb-8" src="Flag.png" />
       <h1 class="font-medium text-2xl mb-8 tracking-tighter">Kractero 🃏</h1>
       <p class="prose prose-invert">
-        The Kingdom of Kractero, also known as Scramble, is an off and on player
-        of NationStates since 2011. In their time on the site, they have not
-        done much of any note. Hopefully, it picks up soon.
+        The Kingdom of Kractero, also known as Scramble, is an off and on player of NationStates since 2011. In their
+        time on the site, they have not done much of any note. Hopefully, it picks up soon.
       </p>
     </a>
   </div>
@@ -25,36 +22,15 @@ import { techs } from "../components/Techs";
     <h2 class="text-lg mb-2 tracking-tighter">Projects</h2>
     <ul class="space-y-4 py-4">
       {
-        projects.map((project) => (
-          <li>
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noreferrer noopener"
-              class="flex flex-col space-y-1.5 !no-underline mb-4"
-            >
-              <div class="flex items-center">
-                <h3 class="text-base font-bold underline">{project.name}</h3>
-                {project.techs.map((tech) => (
-                  <span class="text-xs mx-2 no-underline bg-neutral-800 text-center shadow-md overflow-hidden border-0 bg-muted w-max hover:brightness-90 p-1 rounded-md">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <p class="text-sm mb-4">{project.desc}</p>
-            </a>
-            <hr class="mt-4" />
-          </li>
+        projects.map(project => (
+          <Project url={project.url} name={project.name} techs={project.techs} desc={project.desc} />
         ))
       }
     </ul>
-    <a
-      class="text-base font-bold underline mt-8"
-      href="https://github.com/Kractero">Other random stuff on GitHub</a
-    >
+    <a class="text-base font-bold underline mt-8" href="https://github.com/Kractero">Other random stuff on GitHub</a>
   </div>
 
-  <div class="mx-auto max-w-3xl w-full mb-32">
+  <div class="mx-auto max-w-3xl w-full mb-48">
     <h2 class="text-2xl mb-2">Technologies I butcher</h2>
     <img
       class="my-8"
@@ -62,22 +38,7 @@ import { techs } from "../components/Techs";
     />
     <p class="mb-6">Tools subject to my poor code quality.</p>
     <div class="my-8 flex flex-row gap-8 w-full justify-center">
-      {
-        techs.map((tech) => (
-          <div class="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded flex items-center justify-between px-3 py-4">
-            <a target="_blank" rel="noreferrer noopener" href={tech.url}>
-              <img
-                width="50"
-                src={tech.img}
-                alt={tech.name}
-                title={tech.name}
-              />
-            </a>
-          </div>
-        ))
-      }
+      {techs.map(tech => <Tech url={tech.url} img={tech.img} name={tech.name} />)}
     </div>
   </div>
-
-  <hr class="mb-16" />
 </Layout>
