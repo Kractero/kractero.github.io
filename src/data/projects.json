@@ -23,7 +23,6 @@
 		"desc": "Backend for NationStates trade records.",
 		"techs": ["Express", "SQLite", "Redis"]
 	},
-    {
 	{
 		"url": "https://queries.kractero.com",
 		"name": "Kee",
