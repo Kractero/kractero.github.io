@@ -15,8 +15,15 @@
 		"url": "https://bazaar.kractero.com",
 		"name": "Bazaar",
 		"desc": "NationStates trade records since April 1 2018.",
-		"techs": ["Express", "JavaScript", "Tailwind"]
+		"techs": ["Svelte", "JavaScript", "Tailwind"]
 	},
+	    {
+        "url": "https://github.com/Kractero/maki",
+		"name": "Maki",
+		"desc": "Backend for NationStates trade records.",
+		"techs": ["Express", "SQLite", "Redis"]
+	},
+    {
 	{
 		"url": "https://queries.kractero.com",
 		"name": "Kee",
