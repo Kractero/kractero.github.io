@@ -4,6 +4,9 @@ import Project from '../components/Project.astro'
 import Tech from '../components/Tech.astro'
 import projects from '../data/projects.json'
 import techs from '../data/techs.json'
+
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog');
 ---
 
 <Layout>
@@ -19,6 +22,18 @@ import techs from '../data/techs.json'
   </div>
 
   <div class="mx-auto max-w-3xl mb-32 w-full">
+    <h2 class="text-lg mb-2 tracking-tighter">Reports</h2>
+    <ul>
+      {posts.map(post => (
+        <li class="[&:not(:last-child)]:mb-2">
+          <a href={`/blog/${post.id}`} class="text-base font-bold">{post.data.title}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="mx-auto max-w-3xl mb-32 w-full">
+
     <h2 class="text-lg mb-2 tracking-tighter">Projects</h2>
     <ul class="space-y-4 py-4">
       {
