@@ -1,14 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { getCollection } from 'astro:content';
-const posts = await getCollection('blog');
+// import { getCollection } from 'astro:content';
+// const posts = await getCollection('blog');
 ---
-<h1>My posts</h1>
+<!-- <h1>My posts</h1>
 <ul>
   {posts.map(post => (
     <li><a href={`/blog/${post.id}`}>{post.data.title}</a></li>
   ))}
-</ul>
+</ul> -->
 
 <Layout title="Cards">
   <div class="mx-auto max-w-3xl mb-32 w-full prose prose-neutral dark:prose-invert">
