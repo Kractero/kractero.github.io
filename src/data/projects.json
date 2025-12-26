@@ -1,56 +1,50 @@
 [
-	{
-		"url": "https://hare.kractero.com",
-		"name": "Hare",
-		"desc": "Humble Automated Runner for Executing NationStates Scripts",
-		"techs": ["SvelteKit", "TypeScript", "Tailwind"]
-	},
-	{
-		"url": "https://ledger.kractero.com",
-		"name": "Ledger",
-		"desc": "View detailed data on the cards top 100 and the status of legendaries.",
-		"techs": ["JavaScript"]
-	},
-    {
-		"url": "https://bazaar.kractero.com",
-		"name": "Bazaar",
-		"desc": "NationStates trade records since April 1 2018.",
-		"techs": ["Svelte", "JavaScript", "Tailwind"]
-	},
-	    {
-        "url": "https://github.com/Kractero/maki",
-		"name": "Maki",
-		"desc": "Backend for NationStates trade records.",
-		"techs": ["Express", "SQLite", "Redis"]
-	},
-	{
-		"url": "https://queries.kractero.com",
-		"name": "Kee",
-		"desc": "Frontend for queries for cards related tasks.",
-		"techs": ["SvelteKit", "TypeScript", "Tailwind"]
-	},
-    {
-        "url": "https://github.com/Kractero/kotama",
-		"name": "Kotama",
-		"desc": "Backend for queries for cards related tasks.",
-		"techs": ["Express", "SQLite", "Redis"]
-	},
-    {
-		"url": "https://github.com/Kractero/cardtainers",
-		"name": "Cardtainers",
-		"desc": "A drop-in replacement for Containerise for trading cards.",
-		"techs": ["JavaScript"]
-	},
-    {
-		"url": "https://github.com/Kractero/issue-stats",
-		"name": "Issue Stat Getter",
-		"desc": "Configurable userscript that puts MWQ data directly on your issues page.",
-		"techs": ["JavaScript"]
-	},
-  	{
-		"url": "https://www.nationstates.net/page=dispatch/id=1982277",
-		"name": "2023 Yearly Report",
-		"desc": "2023 Yearly Numbers in cards ",
-		"techs": ["Python", "SQL"]
-	}
+  {
+    "url": "https://hare.kractero.com",
+    "name": "Hare",
+    "desc": "Humble Automated Runner for Executing NationStates Scripts",
+    "techs": ["SvelteKit", "TypeScript", "Tailwind"]
+  },
+  {
+    "url": "https://ledger.kractero.com",
+    "name": "Ledger",
+    "desc": "View detailed data on the cards top 100 and the status of legendaries.",
+    "techs": ["JavaScript"]
+  },
+  {
+    "url": "https://bazaar.kractero.com",
+    "name": "Bazaar",
+    "desc": "NationStates trade records since April 1 2018.",
+    "techs": ["Svelte", "JavaScript", "Tailwind"]
+  },
+  {
+    "url": "https://github.com/Kractero/maki",
+    "name": "Maki",
+    "desc": "Backend for NationStates trade records.",
+    "techs": ["Express", "SQLite", "Redis"]
+  },
+  {
+    "url": "https://queries.kractero.com",
+    "name": "Kee",
+    "desc": "Frontend for queries for cards related tasks.",
+    "techs": ["SvelteKit", "TypeScript", "Tailwind"]
+  },
+  {
+    "url": "https://github.com/Kractero/kotama",
+    "name": "Kotama",
+    "desc": "Backend for queries for cards related tasks.",
+    "techs": ["Express", "SQLite", "Redis"]
+  },
+  {
+    "url": "https://github.com/Kractero/cardtainers",
+    "name": "Cardtainers",
+    "desc": "A drop-in replacement for Containerise for trading cards.",
+    "techs": ["JavaScript"]
+  },
+  {
+    "url": "https://github.com/Kractero/issue-stats",
+    "name": "Issue Stat Getter",
+    "desc": "Configurable userscript that puts MWQ data directly on your issues page.",
+    "techs": ["JavaScript"]
+  }
 ]
